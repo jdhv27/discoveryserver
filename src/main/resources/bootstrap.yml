@@ -1,0 +1,18 @@
+---
+server:
+  port: 8761
+spring:
+  application:
+    name: discoveryserver
+  config:
+    name: ${spring.application.name}
+  cloud:
+    config:
+      uri: http://root:s3cr3t@localhost:8989
+info:
+  application:
+    name: ${spring.application.name}
+    description: Discovery Server Application
+    version: '@project.version@'
+    spring-cloud-version: '@spring-cloud.version@'
+    spring-boot-version: '@project.parent.version@'
